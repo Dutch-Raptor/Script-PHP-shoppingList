@@ -9,6 +9,19 @@ body {
 	padding: 0;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+    background-color: #3e3e3e;
+    color: #fefefe;
+    padding: 0.5rem 0;
+}
+
 th {
 	text-align: start;
 }
