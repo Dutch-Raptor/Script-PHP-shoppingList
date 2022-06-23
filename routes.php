@@ -1,6 +1,7 @@
 <?php
-$router->define([
-    '' => 'controllers/index.php',
-    'groceries' => 'controllers/index.php',
-    'groceries/create' => 'controllers/create.php'
-]);
+
+$router->get('', 'controllers/index.php');
+$router->get('groceries', 'controllers/index.php');
+$router->get('groceries/create', 'controllers/create.php');
+
+$router->post('groceries/additem', 'controllers/addItem.php');
