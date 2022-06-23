@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+$title = "Groceries";
 require 'views/components/head.view.php';
 ?>
 
@@ -28,7 +29,7 @@ require 'views/components/head.view.php';
                         <tr>
                             <td><?= $item->name ?></td>
                             <td class="productPrice"><?= $item->price ?></td>
-                            <td><input type="number" step="0.00001" name="productQuantity-<?= $item->id ?>" class="productQuantity" placeholder="0" value=<?= $item->quantity ?>></td>
+                            <td><input type="number" step="any" name="productQuantity-<?= $item->id ?>" class="productQuantity" placeholder="0" value=<?= $item->quantity ?>></td>
                             <td class="productTotalCost"><?= $item->getTotalFormatted() ?></td>
                         </tr>
 
@@ -43,6 +44,10 @@ require 'views/components/head.view.php';
             <input type="submit" value="Update">
         </form>
     </div>
+    
+<?php
+require 'views/components/footer.view.php';
+?>
 </body>
 
 </html>
