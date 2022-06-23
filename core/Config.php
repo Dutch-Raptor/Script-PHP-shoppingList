@@ -2,7 +2,7 @@
 
 return [
     'database' => [
-        'host' => '172.26.88.2',
+        'host' => 'localhost',
         'port' => 3306,
         'name' => 'shoppinglist',
         'user' => 'testuser',
