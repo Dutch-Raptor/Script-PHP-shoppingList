@@ -1,9 +1,9 @@
 <?php
 
 
+require 'controllers/GroceriesController.php';
 
-
-$groceries_controller = new GroceriesController($database);
+$groceries_controller = new GroceriesController($app['database']);
 
 
 $groceries = $groceries_controller->getAll();
@@ -18,8 +18,13 @@ foreach ($groceries as $item) {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     foreach ($shoppingList as $item) {
         $item->setQuantity(floatval($_POST["productQuantity-" . $item->id]));
-        $query->changeValue('groceries', $item->id, 'quantity', $item->quantity);
+        $app['database']->changeValue('groceries', $item->id, 'quantity', $item->quantity);
     }
+}
+
+$totalCost = 0;
+foreach ($shoppingList as $item) {
+    $totalCost += $item->getTotal();
 }
 
 require 'views/index.view.php';

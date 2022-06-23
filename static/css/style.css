@@ -1,5 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 th {
@@ -21,4 +28,72 @@ td {
 .productTotalCost,
 .totalCost {
 	text-align: end;
+}
+
+.navbar {
+	background-color: #2762c2;
+	color: #fff;
+	width: 100%;
+}
+
+.navbar__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.navbar__container__branding {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: "Poppins", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	margin: 0.5rem 0;
+}
+
+.navigation__list {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	gap: 1rem;
+	list-style: none;
+}
+
+.navigation__list__item__link {
+	text-decoration: none;
+	color: #9abbf0;
+	font-family: "Poppins", sans-serif;
+}
+
+.navigation__list__item__link:hover,
+.navigation__list__item__link:focus {
+	text-decoration: underline;
+	color: #7b94c0;
+}
+
+.navigation__list__item__link.active {
+	color: #f0f3f8;
+}
+
+.container {
+	width: 100%;
+
+	max-width: max(90%, 400px);
+	margin: 0 auto;
+	padding: 0.5rem;
+}
+
+.create-item-form {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: flex-start;
+	align-items: flex-start;
 }
